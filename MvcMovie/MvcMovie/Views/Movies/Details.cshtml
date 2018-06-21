@@ -1,0 +1,79 @@
+﻿@model MvcMovie.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<head>
+    <style>
+        body {
+            background-image: url('../../Content/Image/853713_weather-hd-wallpapers_1280x1024_h.jpg');
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            height:100%;
+            width:100%;
+            color:white;
+        }
+        dt{
+            font-size:20px;
+            color:black;
+        }
+        dd{
+            font-size:20px;
+            color:white;
+        }
+        .dl-horizontal dt{
+            text-align:left;
+        }
+        a{
+            font-size:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h4>Movie</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title):
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ReleaseDate):
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReleaseDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Genre):
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Genre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price):
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
